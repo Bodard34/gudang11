@@ -295,7 +295,7 @@ class Locations extends CI_Controller {
 					);
 
 					// check to see if we are updating the data
-					if ($this->locations_model->update_location_by_code($this->input->post('code'), $data)) {
+					if ($this->locations_model->update_location($id, $data)) {
 						$this->session->set_flashdata('message',
 							$this->config->item('success_start_delimiter', 'ion_auth')
 							."Location Updated!".
